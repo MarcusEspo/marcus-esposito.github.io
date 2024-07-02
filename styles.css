@@ -6,12 +6,14 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 
 .main-content {
   position: relative;
   padding: 5%;
   width: 100%;
+  z-index: 5;
 }
 
 #constent {
@@ -96,6 +98,73 @@ p {
   width: 80%;
 }
 
+.card-text {
+	text-align: center;
+}
+
+.main-nav-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.main-nav-wrap ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.main-nav-wrap a{
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	color: white;
+	font-size: 1.2rem;
+}
+
+.main-nav-wrap a:hover {
+	background-color: dimgray;
+}
+
+.main-nav-wrap ul li.name {
+	margin-right: auto; /* Push the rest of the items to the right */
+	font-weight: bold; /* Optional: Style for the name */
+}
+
+html {
+	scroll-padding-top: 100px; /* Adjust based on the height of your navbar */
+}
+
+#contact {
+	display: flex;
+	background-color: black;
+	flex-direction: column;
+	width: calc(100%+10%);
+	margin: -10%;
+	margin-top: 10%;
+	color: white;
+}
+
+#contact .grid-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr); /* Creates 3 columns of equal width */
+	gap: 10px; /* Optional: Adds space between columns */
+}
+
+#contact .grid-item {
+	padding: 20px; /* Optional: Adds padding inside the columns */
+	padding-bottom: 50px;
+	text-align: center; /* Optional: Centers text within each column */
+}
+
 #resume {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -115,7 +184,7 @@ p {
 }
 
 #intro {
-	padding-top: 1rem;
+	padding-top: 0rem;
 	padding-bottom: 1rem;
     position: relative;
 }
@@ -130,7 +199,7 @@ p {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: #087806;
+	color: #000000;
 }
 
 #resume .resume-timeline {
@@ -183,6 +252,8 @@ p {
 	background: #313131;
 	border-radius: 50%;
 	text-align: center;
+    justify-content: center;
+    align-items: center;
 	color: #FFFFFF;
 	position: absolute;
 	left: 35%;
@@ -192,7 +263,7 @@ p {
 #resume .timeline-ico i {
 	position: relative;
 	left: .05rem;
-	top: .2rem;
+	top: 0rem;
 }
 
 #resume .timeline-header {
@@ -408,38 +479,56 @@ ul {
         }
 
 .btn-outline-success:hover {
-    color: #ffffff; /* White text on hover */
-    border-color: #000000; /* Black border */
-    background-color: #000000; /* Black background on hover */
+	color: #ffffff; /* White text on hover */
+	border-color: #000000; /* Black border */
+	background-color: #000000; /* Black background on hover */
+}
+
+.btn-outline-success-2 {
+	color: white; /* Black text */
+	border-color: white; /* Black border */
+	background-color: transparent; /* Transparent background */
+}
+
+.btn-outline-success-2:hover {
+	color: black; /* White text on hover */
+	border-color: white; /* Black border */
+	background-color: white; /* Black background on hover */
+}
 
 /* Contact me section */
 
 .fa {
-  padding: 20px;
+  padding: 0px;
   font-size: 20px;
-  width: 60px;
+  width: 40px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
 }
 
-.fa:hover {
-  opacity: 0.7;
-}
 
 .fa-paper-plane {
-  background: #3D348B;
+  background-color: transparent;
   color: white;
+  font-size: 30px;
+  padding-bottom: 10px;
 }
 
-.fa-instagram {
-  background: #7678ED;
-  color: white;
+.fa-linkedin {
+	background-color: transparent;
+	font-size: 30px;
+	padding-bottom: 10px;
 }
 
-.fa-github {
-  background: #0973fd;
-  color: white;
+.fa-linkedin-in {
+	background-color: transparent;
+}
+
+.fa-phone {
+	background-color: transparent;
+	font-size: 30px;
+	padding-bottom: 10px;
 }
 
 /* Styling for the progress bars */
@@ -464,20 +553,6 @@ ul {
   font-size: 15px;
 }
 
-.italian {
-  width: 100%;
-}
-
-.english {
-  width: 100%;
-}
-
-.german {
-  width: 85%;
-}
-
-.mandarin {
-  width: 20%
 }
 
 @media only screen and (max-width: 550px) and (min-width: 200px){
